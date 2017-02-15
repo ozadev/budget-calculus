@@ -1,0 +1,569 @@
+.services-calculator-container {
+  text-align: left;
+  font-family: "Open Sans";
+  width: 600px;
+  height: 300px;
+  background-color: #f8f8f8;
+  -webkit-box-shadow: 0px 5px 30px 0px rgba(23, 102, 99, 0.49);
+  box-shadow: 0px 5px 30px 0px rgba(23, 102, 99, 0.49); }
+  .services-calculator-container:before {
+    content: "";
+    display: table;
+    clear: both; }
+  .services-calculator-container .calculator-data-column {
+    height: inherit;
+    background-color: #f8f8f8;
+    width: -webkit-calc(100% - 150px);
+    width: calc(100% - 150px);
+    float: left; }
+  .services-calculator-container .calculator-progress-column {
+    height: inherit;
+    background-color: #2ab6b3;
+    width: 150px;
+    float: left;
+    -webkit-box-shadow: inset 13px -1px 14px -11px rgba(0, 0, 0, 0.59);
+    box-shadow: inset 13px -1px 14px -11px rgba(0, 0, 0, 0.59); }
+  .services-calculator-container .calculator-data-container {
+    height: inherit;
+    position: relative;
+    padding: 5px 20px; }
+  .services-calculator-container .calculator-data-container::after {
+    content: " ";
+    position: absolute;
+    right: -24px;
+    top: 50%;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    margin-left: -12px;
+    border: 12px solid transparent;
+    border-left-color: #f8f8f8; }
+  .services-calculator-container .calculator-title {
+    margin: 5px 0 10px 0;
+    color: #2ab6b3;
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center; }
+  .services-calculator-container .calculator-list {
+    border: 2px solid #77ACBF;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    overflow-y: scroll;
+    height: -webkit-calc(100% - 125px);
+    height: calc(100% - 125px); }
+  .services-calculator-container .calculator-list-item {
+    position: relative;
+    padding: 0 50px 0 15px;
+    height: 35px;
+    line-height: 35px;
+    vertical-align: middle;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: #0d4745; }
+    .services-calculator-container .calculator-list-item:hover {
+      background-color: #daf5ff; }
+      .services-calculator-container .calculator-list-item:hover .calculator-item-count {
+        opacity: 1; }
+  .services-calculator-container .calculator-item-count {
+    position: absolute;
+    right: 10px;
+    padding: 0 5px;
+    border: 1px solid #77ACBF;
+    width: 40px;
+    height: 25px;
+    top: 3px;
+    font-size: 16px;
+    opacity: 0.5; }
+    .services-calculator-container .calculator-item-count:focus {
+      opacity: 1; }
+    .services-calculator-container .calculator-item-count.ng-invalid {
+      background-color: #e87b7b; }
+  .services-calculator-container .calculator-budget {
+    text-align: right;
+    padding: 20px 0 0 0; }
+  .services-calculator-container .calculator-budget-title {
+    color: #2ab6b3;
+    margin-right: 10px; }
+  .services-calculator-container .calculator-budget-value {
+    border: 1px solid #77ACBF;
+    padding: 0 5px;
+    width: 90px;
+    height: 25px;
+    font-size: 16px;
+    opacity: 0.5; }
+    .services-calculator-container .calculator-budget-value:focus {
+      opacity: 1; }
+  .services-calculator-container .calculator-progress-container {
+    position: relative;
+    height: 100%;
+    width: 100%; }
+  .services-calculator-container .progress-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    -ms-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+    transform: translateX(-50%) translateY(-50%) rotate(-90deg); }
+  .services-calculator-container .progress progress[value="0"] + .progress-value:before {
+    content: "0%"; }
+  .services-calculator-container .progress progress[value="0"] ~ .progress-bg .progress-bar {
+    width: 0%; }
+  .services-calculator-container .progress progress[value="1"] + .progress-value:before {
+    content: "1%"; }
+  .services-calculator-container .progress progress[value="1"] ~ .progress-bg .progress-bar {
+    width: 1%; }
+  .services-calculator-container .progress progress[value="2"] + .progress-value:before {
+    content: "2%"; }
+  .services-calculator-container .progress progress[value="2"] ~ .progress-bg .progress-bar {
+    width: 2%; }
+  .services-calculator-container .progress progress[value="3"] + .progress-value:before {
+    content: "3%"; }
+  .services-calculator-container .progress progress[value="3"] ~ .progress-bg .progress-bar {
+    width: 3%; }
+  .services-calculator-container .progress progress[value="4"] + .progress-value:before {
+    content: "4%"; }
+  .services-calculator-container .progress progress[value="4"] ~ .progress-bg .progress-bar {
+    width: 4%; }
+  .services-calculator-container .progress progress[value="5"] + .progress-value:before {
+    content: "5%"; }
+  .services-calculator-container .progress progress[value="5"] ~ .progress-bg .progress-bar {
+    width: 5%; }
+  .services-calculator-container .progress progress[value="6"] + .progress-value:before {
+    content: "6%"; }
+  .services-calculator-container .progress progress[value="6"] ~ .progress-bg .progress-bar {
+    width: 6%; }
+  .services-calculator-container .progress progress[value="7"] + .progress-value:before {
+    content: "7%"; }
+  .services-calculator-container .progress progress[value="7"] ~ .progress-bg .progress-bar {
+    width: 7%; }
+  .services-calculator-container .progress progress[value="8"] + .progress-value:before {
+    content: "8%"; }
+  .services-calculator-container .progress progress[value="8"] ~ .progress-bg .progress-bar {
+    width: 8%; }
+  .services-calculator-container .progress progress[value="9"] + .progress-value:before {
+    content: "9%"; }
+  .services-calculator-container .progress progress[value="9"] ~ .progress-bg .progress-bar {
+    width: 9%; }
+  .services-calculator-container .progress progress[value="10"] + .progress-value:before {
+    content: "10%"; }
+  .services-calculator-container .progress progress[value="10"] ~ .progress-bg .progress-bar {
+    width: 10%; }
+  .services-calculator-container .progress progress[value="11"] + .progress-value:before {
+    content: "11%"; }
+  .services-calculator-container .progress progress[value="11"] ~ .progress-bg .progress-bar {
+    width: 11%; }
+  .services-calculator-container .progress progress[value="12"] + .progress-value:before {
+    content: "12%"; }
+  .services-calculator-container .progress progress[value="12"] ~ .progress-bg .progress-bar {
+    width: 12%; }
+  .services-calculator-container .progress progress[value="13"] + .progress-value:before {
+    content: "13%"; }
+  .services-calculator-container .progress progress[value="13"] ~ .progress-bg .progress-bar {
+    width: 13%; }
+  .services-calculator-container .progress progress[value="14"] + .progress-value:before {
+    content: "14%"; }
+  .services-calculator-container .progress progress[value="14"] ~ .progress-bg .progress-bar {
+    width: 14%; }
+  .services-calculator-container .progress progress[value="15"] + .progress-value:before {
+    content: "15%"; }
+  .services-calculator-container .progress progress[value="15"] ~ .progress-bg .progress-bar {
+    width: 15%; }
+  .services-calculator-container .progress progress[value="16"] + .progress-value:before {
+    content: "16%"; }
+  .services-calculator-container .progress progress[value="16"] ~ .progress-bg .progress-bar {
+    width: 16%; }
+  .services-calculator-container .progress progress[value="17"] + .progress-value:before {
+    content: "17%"; }
+  .services-calculator-container .progress progress[value="17"] ~ .progress-bg .progress-bar {
+    width: 17%; }
+  .services-calculator-container .progress progress[value="18"] + .progress-value:before {
+    content: "18%"; }
+  .services-calculator-container .progress progress[value="18"] ~ .progress-bg .progress-bar {
+    width: 18%; }
+  .services-calculator-container .progress progress[value="19"] + .progress-value:before {
+    content: "19%"; }
+  .services-calculator-container .progress progress[value="19"] ~ .progress-bg .progress-bar {
+    width: 19%; }
+  .services-calculator-container .progress progress[value="20"] + .progress-value:before {
+    content: "20%"; }
+  .services-calculator-container .progress progress[value="20"] ~ .progress-bg .progress-bar {
+    width: 20%; }
+  .services-calculator-container .progress progress[value="21"] + .progress-value:before {
+    content: "21%"; }
+  .services-calculator-container .progress progress[value="21"] ~ .progress-bg .progress-bar {
+    width: 21%; }
+  .services-calculator-container .progress progress[value="22"] + .progress-value:before {
+    content: "22%"; }
+  .services-calculator-container .progress progress[value="22"] ~ .progress-bg .progress-bar {
+    width: 22%; }
+  .services-calculator-container .progress progress[value="23"] + .progress-value:before {
+    content: "23%"; }
+  .services-calculator-container .progress progress[value="23"] ~ .progress-bg .progress-bar {
+    width: 23%; }
+  .services-calculator-container .progress progress[value="24"] + .progress-value:before {
+    content: "24%"; }
+  .services-calculator-container .progress progress[value="24"] ~ .progress-bg .progress-bar {
+    width: 24%; }
+  .services-calculator-container .progress progress[value="25"] + .progress-value:before {
+    content: "25%"; }
+  .services-calculator-container .progress progress[value="25"] ~ .progress-bg .progress-bar {
+    width: 25%; }
+  .services-calculator-container .progress progress[value="26"] + .progress-value:before {
+    content: "26%"; }
+  .services-calculator-container .progress progress[value="26"] ~ .progress-bg .progress-bar {
+    width: 26%; }
+  .services-calculator-container .progress progress[value="27"] + .progress-value:before {
+    content: "27%"; }
+  .services-calculator-container .progress progress[value="27"] ~ .progress-bg .progress-bar {
+    width: 27%; }
+  .services-calculator-container .progress progress[value="28"] + .progress-value:before {
+    content: "28%"; }
+  .services-calculator-container .progress progress[value="28"] ~ .progress-bg .progress-bar {
+    width: 28%; }
+  .services-calculator-container .progress progress[value="29"] + .progress-value:before {
+    content: "29%"; }
+  .services-calculator-container .progress progress[value="29"] ~ .progress-bg .progress-bar {
+    width: 29%; }
+  .services-calculator-container .progress progress[value="30"] + .progress-value:before {
+    content: "30%"; }
+  .services-calculator-container .progress progress[value="30"] ~ .progress-bg .progress-bar {
+    width: 30%; }
+  .services-calculator-container .progress progress[value="31"] + .progress-value:before {
+    content: "31%"; }
+  .services-calculator-container .progress progress[value="31"] ~ .progress-bg .progress-bar {
+    width: 31%; }
+  .services-calculator-container .progress progress[value="32"] + .progress-value:before {
+    content: "32%"; }
+  .services-calculator-container .progress progress[value="32"] ~ .progress-bg .progress-bar {
+    width: 32%; }
+  .services-calculator-container .progress progress[value="33"] + .progress-value:before {
+    content: "33%"; }
+  .services-calculator-container .progress progress[value="33"] ~ .progress-bg .progress-bar {
+    width: 33%; }
+  .services-calculator-container .progress progress[value="34"] + .progress-value:before {
+    content: "34%"; }
+  .services-calculator-container .progress progress[value="34"] ~ .progress-bg .progress-bar {
+    width: 34%; }
+  .services-calculator-container .progress progress[value="35"] + .progress-value:before {
+    content: "35%"; }
+  .services-calculator-container .progress progress[value="35"] ~ .progress-bg .progress-bar {
+    width: 35%; }
+  .services-calculator-container .progress progress[value="36"] + .progress-value:before {
+    content: "36%"; }
+  .services-calculator-container .progress progress[value="36"] ~ .progress-bg .progress-bar {
+    width: 36%; }
+  .services-calculator-container .progress progress[value="37"] + .progress-value:before {
+    content: "37%"; }
+  .services-calculator-container .progress progress[value="37"] ~ .progress-bg .progress-bar {
+    width: 37%; }
+  .services-calculator-container .progress progress[value="38"] + .progress-value:before {
+    content: "38%"; }
+  .services-calculator-container .progress progress[value="38"] ~ .progress-bg .progress-bar {
+    width: 38%; }
+  .services-calculator-container .progress progress[value="39"] + .progress-value:before {
+    content: "39%"; }
+  .services-calculator-container .progress progress[value="39"] ~ .progress-bg .progress-bar {
+    width: 39%; }
+  .services-calculator-container .progress progress[value="40"] + .progress-value:before {
+    content: "40%"; }
+  .services-calculator-container .progress progress[value="40"] ~ .progress-bg .progress-bar {
+    width: 40%; }
+  .services-calculator-container .progress progress[value="41"] + .progress-value:before {
+    content: "41%"; }
+  .services-calculator-container .progress progress[value="41"] ~ .progress-bg .progress-bar {
+    width: 41%; }
+  .services-calculator-container .progress progress[value="42"] + .progress-value:before {
+    content: "42%"; }
+  .services-calculator-container .progress progress[value="42"] ~ .progress-bg .progress-bar {
+    width: 42%; }
+  .services-calculator-container .progress progress[value="43"] + .progress-value:before {
+    content: "43%"; }
+  .services-calculator-container .progress progress[value="43"] ~ .progress-bg .progress-bar {
+    width: 43%; }
+  .services-calculator-container .progress progress[value="44"] + .progress-value:before {
+    content: "44%"; }
+  .services-calculator-container .progress progress[value="44"] ~ .progress-bg .progress-bar {
+    width: 44%; }
+  .services-calculator-container .progress progress[value="45"] + .progress-value:before {
+    content: "45%"; }
+  .services-calculator-container .progress progress[value="45"] ~ .progress-bg .progress-bar {
+    width: 45%; }
+  .services-calculator-container .progress progress[value="46"] + .progress-value:before {
+    content: "46%"; }
+  .services-calculator-container .progress progress[value="46"] ~ .progress-bg .progress-bar {
+    width: 46%; }
+  .services-calculator-container .progress progress[value="47"] + .progress-value:before {
+    content: "47%"; }
+  .services-calculator-container .progress progress[value="47"] ~ .progress-bg .progress-bar {
+    width: 47%; }
+  .services-calculator-container .progress progress[value="48"] + .progress-value:before {
+    content: "48%"; }
+  .services-calculator-container .progress progress[value="48"] ~ .progress-bg .progress-bar {
+    width: 48%; }
+  .services-calculator-container .progress progress[value="49"] + .progress-value:before {
+    content: "49%"; }
+  .services-calculator-container .progress progress[value="49"] ~ .progress-bg .progress-bar {
+    width: 49%; }
+  .services-calculator-container .progress progress[value="50"] + .progress-value:before {
+    content: "50%"; }
+  .services-calculator-container .progress progress[value="50"] ~ .progress-bg .progress-bar {
+    width: 50%; }
+  .services-calculator-container .progress progress[value="51"] + .progress-value:before {
+    content: "51%"; }
+  .services-calculator-container .progress progress[value="51"] ~ .progress-bg .progress-bar {
+    width: 51%; }
+  .services-calculator-container .progress progress[value="52"] + .progress-value:before {
+    content: "52%"; }
+  .services-calculator-container .progress progress[value="52"] ~ .progress-bg .progress-bar {
+    width: 52%; }
+  .services-calculator-container .progress progress[value="53"] + .progress-value:before {
+    content: "53%"; }
+  .services-calculator-container .progress progress[value="53"] ~ .progress-bg .progress-bar {
+    width: 53%; }
+  .services-calculator-container .progress progress[value="54"] + .progress-value:before {
+    content: "54%"; }
+  .services-calculator-container .progress progress[value="54"] ~ .progress-bg .progress-bar {
+    width: 54%; }
+  .services-calculator-container .progress progress[value="55"] + .progress-value:before {
+    content: "55%"; }
+  .services-calculator-container .progress progress[value="55"] ~ .progress-bg .progress-bar {
+    width: 55%; }
+  .services-calculator-container .progress progress[value="56"] + .progress-value:before {
+    content: "56%"; }
+  .services-calculator-container .progress progress[value="56"] ~ .progress-bg .progress-bar {
+    width: 56%; }
+  .services-calculator-container .progress progress[value="57"] + .progress-value:before {
+    content: "57%"; }
+  .services-calculator-container .progress progress[value="57"] ~ .progress-bg .progress-bar {
+    width: 57%; }
+  .services-calculator-container .progress progress[value="58"] + .progress-value:before {
+    content: "58%"; }
+  .services-calculator-container .progress progress[value="58"] ~ .progress-bg .progress-bar {
+    width: 58%; }
+  .services-calculator-container .progress progress[value="59"] + .progress-value:before {
+    content: "59%"; }
+  .services-calculator-container .progress progress[value="59"] ~ .progress-bg .progress-bar {
+    width: 59%; }
+  .services-calculator-container .progress progress[value="60"] + .progress-value:before {
+    content: "60%"; }
+  .services-calculator-container .progress progress[value="60"] ~ .progress-bg .progress-bar {
+    width: 60%; }
+  .services-calculator-container .progress progress[value="61"] + .progress-value:before {
+    content: "61%"; }
+  .services-calculator-container .progress progress[value="61"] ~ .progress-bg .progress-bar {
+    width: 61%; }
+  .services-calculator-container .progress progress[value="62"] + .progress-value:before {
+    content: "62%"; }
+  .services-calculator-container .progress progress[value="62"] ~ .progress-bg .progress-bar {
+    width: 62%; }
+  .services-calculator-container .progress progress[value="63"] + .progress-value:before {
+    content: "63%"; }
+  .services-calculator-container .progress progress[value="63"] ~ .progress-bg .progress-bar {
+    width: 63%; }
+  .services-calculator-container .progress progress[value="64"] + .progress-value:before {
+    content: "64%"; }
+  .services-calculator-container .progress progress[value="64"] ~ .progress-bg .progress-bar {
+    width: 64%; }
+  .services-calculator-container .progress progress[value="65"] + .progress-value:before {
+    content: "65%"; }
+  .services-calculator-container .progress progress[value="65"] ~ .progress-bg .progress-bar {
+    width: 65%; }
+  .services-calculator-container .progress progress[value="66"] + .progress-value:before {
+    content: "66%"; }
+  .services-calculator-container .progress progress[value="66"] ~ .progress-bg .progress-bar {
+    width: 66%; }
+  .services-calculator-container .progress progress[value="67"] + .progress-value:before {
+    content: "67%"; }
+  .services-calculator-container .progress progress[value="67"] ~ .progress-bg .progress-bar {
+    width: 67%; }
+  .services-calculator-container .progress progress[value="68"] + .progress-value:before {
+    content: "68%"; }
+  .services-calculator-container .progress progress[value="68"] ~ .progress-bg .progress-bar {
+    width: 68%; }
+  .services-calculator-container .progress progress[value="69"] + .progress-value:before {
+    content: "69%"; }
+  .services-calculator-container .progress progress[value="69"] ~ .progress-bg .progress-bar {
+    width: 69%; }
+  .services-calculator-container .progress progress[value="70"] + .progress-value:before {
+    content: "70%"; }
+  .services-calculator-container .progress progress[value="70"] ~ .progress-bg .progress-bar {
+    width: 70%; }
+  .services-calculator-container .progress progress[value="71"] + .progress-value:before {
+    content: "71%"; }
+  .services-calculator-container .progress progress[value="71"] ~ .progress-bg .progress-bar {
+    width: 71%; }
+  .services-calculator-container .progress progress[value="72"] + .progress-value:before {
+    content: "72%"; }
+  .services-calculator-container .progress progress[value="72"] ~ .progress-bg .progress-bar {
+    width: 72%; }
+  .services-calculator-container .progress progress[value="73"] + .progress-value:before {
+    content: "73%"; }
+  .services-calculator-container .progress progress[value="73"] ~ .progress-bg .progress-bar {
+    width: 73%; }
+  .services-calculator-container .progress progress[value="74"] + .progress-value:before {
+    content: "74%"; }
+  .services-calculator-container .progress progress[value="74"] ~ .progress-bg .progress-bar {
+    width: 74%; }
+  .services-calculator-container .progress progress[value="75"] + .progress-value:before {
+    content: "75%"; }
+  .services-calculator-container .progress progress[value="75"] ~ .progress-bg .progress-bar {
+    width: 75%; }
+  .services-calculator-container .progress progress[value="76"] + .progress-value:before {
+    content: "76%"; }
+  .services-calculator-container .progress progress[value="76"] ~ .progress-bg .progress-bar {
+    width: 76%; }
+  .services-calculator-container .progress progress[value="77"] + .progress-value:before {
+    content: "77%"; }
+  .services-calculator-container .progress progress[value="77"] ~ .progress-bg .progress-bar {
+    width: 77%; }
+  .services-calculator-container .progress progress[value="78"] + .progress-value:before {
+    content: "78%"; }
+  .services-calculator-container .progress progress[value="78"] ~ .progress-bg .progress-bar {
+    width: 78%; }
+  .services-calculator-container .progress progress[value="79"] + .progress-value:before {
+    content: "79%"; }
+  .services-calculator-container .progress progress[value="79"] ~ .progress-bg .progress-bar {
+    width: 79%; }
+  .services-calculator-container .progress progress[value="80"] + .progress-value:before {
+    content: "80%"; }
+  .services-calculator-container .progress progress[value="80"] ~ .progress-bg .progress-bar {
+    width: 80%; }
+  .services-calculator-container .progress progress[value="81"] + .progress-value:before {
+    content: "81%"; }
+  .services-calculator-container .progress progress[value="81"] ~ .progress-bg .progress-bar {
+    width: 81%; }
+  .services-calculator-container .progress progress[value="82"] + .progress-value:before {
+    content: "82%"; }
+  .services-calculator-container .progress progress[value="82"] ~ .progress-bg .progress-bar {
+    width: 82%; }
+  .services-calculator-container .progress progress[value="83"] + .progress-value:before {
+    content: "83%"; }
+  .services-calculator-container .progress progress[value="83"] ~ .progress-bg .progress-bar {
+    width: 83%; }
+  .services-calculator-container .progress progress[value="84"] + .progress-value:before {
+    content: "84%"; }
+  .services-calculator-container .progress progress[value="84"] ~ .progress-bg .progress-bar {
+    width: 84%; }
+  .services-calculator-container .progress progress[value="85"] + .progress-value:before {
+    content: "85%"; }
+  .services-calculator-container .progress progress[value="85"] ~ .progress-bg .progress-bar {
+    width: 85%; }
+  .services-calculator-container .progress progress[value="86"] + .progress-value:before {
+    content: "86%"; }
+  .services-calculator-container .progress progress[value="86"] ~ .progress-bg .progress-bar {
+    width: 86%; }
+  .services-calculator-container .progress progress[value="87"] + .progress-value:before {
+    content: "87%"; }
+  .services-calculator-container .progress progress[value="87"] ~ .progress-bg .progress-bar {
+    width: 87%; }
+  .services-calculator-container .progress progress[value="88"] + .progress-value:before {
+    content: "88%"; }
+  .services-calculator-container .progress progress[value="88"] ~ .progress-bg .progress-bar {
+    width: 88%; }
+  .services-calculator-container .progress progress[value="89"] + .progress-value:before {
+    content: "89%"; }
+  .services-calculator-container .progress progress[value="89"] ~ .progress-bg .progress-bar {
+    width: 89%; }
+  .services-calculator-container .progress progress[value="90"] + .progress-value:before {
+    content: "90%"; }
+  .services-calculator-container .progress progress[value="90"] ~ .progress-bg .progress-bar {
+    width: 90%; }
+  .services-calculator-container .progress progress[value="91"] + .progress-value:before {
+    content: "91%"; }
+  .services-calculator-container .progress progress[value="91"] ~ .progress-bg .progress-bar {
+    width: 91%; }
+  .services-calculator-container .progress progress[value="92"] + .progress-value:before {
+    content: "92%"; }
+  .services-calculator-container .progress progress[value="92"] ~ .progress-bg .progress-bar {
+    width: 92%; }
+  .services-calculator-container .progress progress[value="93"] + .progress-value:before {
+    content: "93%"; }
+  .services-calculator-container .progress progress[value="93"] ~ .progress-bg .progress-bar {
+    width: 93%; }
+  .services-calculator-container .progress progress[value="94"] + .progress-value:before {
+    content: "94%"; }
+  .services-calculator-container .progress progress[value="94"] ~ .progress-bg .progress-bar {
+    width: 94%; }
+  .services-calculator-container .progress progress[value="95"] + .progress-value:before {
+    content: "95%"; }
+  .services-calculator-container .progress progress[value="95"] ~ .progress-bg .progress-bar {
+    width: 95%; }
+  .services-calculator-container .progress progress[value="96"] + .progress-value:before {
+    content: "96%"; }
+  .services-calculator-container .progress progress[value="96"] ~ .progress-bg .progress-bar {
+    width: 96%; }
+  .services-calculator-container .progress progress[value="97"] + .progress-value:before {
+    content: "97%"; }
+  .services-calculator-container .progress progress[value="97"] ~ .progress-bg .progress-bar {
+    width: 97%; }
+  .services-calculator-container .progress progress[value="98"] + .progress-value:before {
+    content: "98%"; }
+  .services-calculator-container .progress progress[value="98"] ~ .progress-bg .progress-bar {
+    width: 98%; }
+  .services-calculator-container .progress progress[value="99"] + .progress-value:before {
+    content: "99%"; }
+  .services-calculator-container .progress progress[value="99"] ~ .progress-bg .progress-bar {
+    width: 99%; }
+  .services-calculator-container .progress progress[value="100"] + .progress-value:before {
+    content: "100%"; }
+  .services-calculator-container .progress progress[value="100"] ~ .progress-bg .progress-bar {
+    width: 100%; }
+  .services-calculator-container .progress {
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    font: 12px Arial, Tahoma, sans-serif;
+    position: relative;
+    overflow: hidden; }
+    .services-calculator-container .progress progress {
+      position: absolute;
+      width: 0;
+      height: 0;
+      overflow: hidden; }
+  .services-calculator-container .progress-value {
+    color: #333;
+    display: block;
+    line-height: 21px;
+    text-align: center; }
+  .services-calculator-container .progress-bg {
+    background: #ffffff;
+    position: relative;
+    height: 25px;
+    overflow: hidden;
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(70%, rgba(255, 235, 14, 0.52)), color-stop(85%, rgba(255, 150, 63, 0.8)), to(rgba(238, 74, 74, 0.8)));
+    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.15) 50%, rgba(255, 235, 14, 0.52) 70%, rgba(255, 150, 63, 0.8) 85%, rgba(238, 74, 74, 0.8) 100%);
+    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 50%, rgba(255, 235, 14, 0.52) 70%, rgba(255, 150, 63, 0.8) 85%, rgba(238, 74, 74, 0.8) 100%); }
+
+@-webkit-keyframes progress_bar {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -40px 0; } }
+
+@keyframes progress_bar {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: -40px 0; } }
+  .services-calculator-container .progress-bar {
+    overflow: hidden;
+    background: #45db68;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    -webkit-transition: width 1s linear;
+    transition: width 1s linear; }
+    .services-calculator-container .progress-bar:after {
+      -webkit-animation: progress_bar 0.8s linear infinite;
+      animation: progress_bar 0.8s linear infinite;
+      background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+      background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+      background-size: 40px 40px;
+      position: absolute;
+      content: '';
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%; }

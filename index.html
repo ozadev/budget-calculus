@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Copy this. start-->
+<html lang="en" data-ng-app="App">
+<!-- end -->
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Demo</title>
+
+    <!-- CSS style. start-->
+    <link rel="stylesheet" href="./js/servicesCalculatorWidget/servicesCalculator.css"/>
+    <!-- end -->
+    <style>
+        .calculator-container {
+            /* To change calculator container style */
+            /* default: height 300px; width: 600px; */
+        }
+    </style>
+</head>
+<body>
+
+    <div style="margin: 100px;">
+        <!-- Html template. start-->
+        <services-calculator class="calculator-container"></services-calculator>
+        <!-- end -->
+    </div>
+
+    <!-- Javascript logic. start-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="./js/servicesCalculatorWidget/servicesCalculator.js"></script>
+    <script>
+        angular.module('App', ['servicesCalculator']);
+    </script>
+    <!-- end -->
+</body>
+</html>

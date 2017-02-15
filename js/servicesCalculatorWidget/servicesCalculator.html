@@ -1,0 +1,30 @@
+<div class="services-calculator-container">
+    <div class="calculator-data-column">
+        <div class="calculator-data-container">
+            <div class="calculator-title">Services calculator</div>
+            <div class="calculator-list">
+                <form class="calculator-list-item" data-ng-repeat="item in list">
+                    <span>{{item.name}}</span>
+                    <input class="calculator-item-count"
+                           type="number" min="0"
+                           data-ng-model="item.value"
+                           data-ng-change="numberSanitise($index)">
+                </form>
+            </div>
+            <div class="calculator-budget">
+                <span class="calculator-budget-title">Total Budget:</span>
+                <input class="calculator-budget-value" type="number" data-ng-model="budget" data-ng-change="budgetSanitise()">
+            </div>
+        </div>
+    </div>
+    <div class="calculator-progress-column">
+        <div class="calculator-progress-container">
+            <div class="progress-container">
+                <div class="progress">
+                    <progress max="100" ng-attr-value={{getProgressValue()}}></progress>
+                    <div class="progress-bg"><div class="progress-bar"></div></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
