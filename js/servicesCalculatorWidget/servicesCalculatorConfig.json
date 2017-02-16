@@ -1,41 +1,91 @@
 [
   {
     "name": "category1",
+    "type": "input",
     "cost": 300,
     "value": 0
   },
   {
     "name": "category2",
+    "type": "input",
     "cost": 100,
     "value": 0
   },
   {
     "name": "category3",
+    "type": "select",
+    "options": [
+      {
+        "title": "low",
+        "value": 20
+      },
+      {
+        "title": "medium",
+        "value": 30
+      },
+      {
+        "title": "high",
+        "value": 40
+      }
+    ],
     "cost": 120,
     "value": 0
   },
   {
     "name": "category4",
+    "type": "select",
+    "options": [
+      {
+        "title": "low",
+        "value": 5
+      },
+      {
+        "title": "medium",
+        "value": 10
+      },
+      {
+        "title": "high",
+        "value": 15
+      }
+    ],
     "cost": 20,
     "value": 0
   },
   {
     "name": "category5",
+    "type": "input",
     "cost": 80,
     "value": 0
   },
   {
     "name": "category6",
+    "type": "select",
+    "options": [
+      {
+        "title": "low",
+        "value": 30
+      },
+      {
+        "title": "medium",
+        "value": 40
+      },
+      {
+        "title": "high",
+        "value": 50
+      }
+    ],
     "cost": 120,
     "value": 0
   },
   {
     "name": "category7",
+    "type": "input",
     "cost": 20,
     "value": 0
   },
   {
     "name": "category8",
+    "type": "input",
     "cost": 80,
     "value": 0
   }

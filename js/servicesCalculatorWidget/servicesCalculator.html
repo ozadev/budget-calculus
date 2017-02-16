@@ -8,7 +8,16 @@
                     <input class="calculator-item-count"
                            type="number" min="0"
                            data-ng-model="item.value"
-                           data-ng-change="numberSanitise($index)">
+                           data-ng-change="numberSanitise($index)"
+                           data-ng-if="item.type === 'input'">
+                    <select class="calculator-item-select"
+                           data-ng-model="item.value"
+                           data-ng-change="selectSanitise($index)"
+                           data-ng-init="item.value = '0'"
+                           data-ng-if="item.type === 'select'">
+                        <option value="0"></option>
+                        <option data-ng-repeat="option in item.options" value="{{option.value}}">{{option.title}}</option>
+                    </select>
                 </form>
             </div>
             <div class="calculator-budget">
@@ -27,4 +36,6 @@
             </div>
         </div>
     </div>
+    {{list}}
+    {{calcTotalSum()}}
 </div>

@@ -21,6 +21,8 @@
                     scope.budgetSanitise = budgetSanitise;
                     scope.numberSanitise = numberSanitise;
                     scope.getProgressValue = getProgressValue;
+                    scope.selectSanitise = selectSanitise;
+                    scope.calcTotalSum = calcTotalSum;
 
                     $http({
                         method: 'GET',
@@ -64,6 +66,12 @@
 
                     }
 
+                    function selectSanitise(index) {
+                        if(calcTotalSum() > scope.budget) {
+                            scope.list[index].value = '0';
+                        }
+                    }
+
                     function budgetSanitise() {
                         if(calcTotalSum() > scope.budget) {
                             scope.list.forEach(function(item) {
@@ -75,13 +83,26 @@
                     function calcTotalSum() {
                         var totalSpent = 0;
                         scope.list.forEach(function(item) {
-                            if(item.value) {
-                                totalSpent += item.value * item.cost;
+                            if(item.type === 'input') {
+                                if(item.value) {
+                                    totalSpent += item.value * item.cost;
+                                }
+                            }
+                            else {
+                                if(parseInt(item.value)) {
+                                    totalSpent += parseInt(item.value);
+                                }
                             }
                         });
 
                         return totalSpent;
                     }
+
+                    // scope.getOptionValue = getOptionValue;
+                    //
+                    // function getOptionValue(key) {
+                    //     return parseInt(key); //(!isNaN(key)) ? parseInt(key) : key;
+                    // }
 
                 }
             }
