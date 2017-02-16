@@ -1,42 +1,17 @@
 [
   {
-    "name": "category1",
+    "name": "Low",
     "cost": 300,
     "value": 0
   },
   {
-    "name": "category2",
+    "name": "Medium",
     "cost": 100,
     "value": 0
   },
   {
-    "name": "category3",
+    "name": "High",
     "cost": 120,
-    "value": 0
-  },
-  {
-    "name": "category4",
-    "cost": 20,
-    "value": 0
-  },
-  {
-    "name": "category5",
-    "cost": 80,
-    "value": 0
-  },
-  {
-    "name": "category6",
-    "cost": 120,
-    "value": 0
-  },
-  {
-    "name": "category7",
-    "cost": 20,
-    "value": 0
-  },
-  {
-    "name": "category8",
-    "cost": 80,
     "value": 0
   }
 ]
