@@ -2,6 +2,10 @@
     <div class="calculator-data-column">
         <div class="calculator-data-container">
             <div class="calculator-title">Services calculator</div>
+            <div class="calculator-budget">
+                <span class="calculator-budget-title">Total Budget:</span>
+                <input class="calculator-budget-value" type="number" data-ng-model="budget" data-ng-change="budgetSanitise()">
+            </div>
             <div class="calculator-list">
                 <form class="calculator-list-item" data-ng-repeat="item in list">
                     <span>{{item.name}}</span>
@@ -20,10 +24,6 @@
                     </select>
                 </form>
             </div>
-            <div class="calculator-budget">
-                <span class="calculator-budget-title">Total Budget:</span>
-                <input class="calculator-budget-value" type="number" data-ng-model="budget" data-ng-change="budgetSanitise()">
-            </div>
         </div>
     </div>
     <div class="calculator-progress-column">
@@ -36,6 +36,4 @@
             </div>
         </div>
     </div>
-    {{list}}
-    {{calcTotalSum()}}
 </div>

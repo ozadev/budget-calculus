@@ -37,6 +37,17 @@
                     //
                     //
 
+                    function calcDiscount(value) {
+                        var discount = 5;
+
+                        if(value > 1500) discount = 10;
+                        if(value > 2500) discount = 15;
+                        if(value > 3500) discount = 20;
+                        if(value > 5000) discount = 25;
+
+                        return value * ((100 - discount) / 100);
+                    }
+
                     function getProgressValue() {
                         var totalSpent = calcTotalSum();
 
@@ -95,7 +106,7 @@
                             }
                         });
 
-                        return totalSpent;
+                        return calcDiscount(totalSpent);
                     }
 
                     // scope.getOptionValue = getOptionValue;
