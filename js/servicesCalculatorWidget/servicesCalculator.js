@@ -78,6 +78,8 @@
 
                     function numberSanitise(index) {
 
+                        budgetSanitise();
+
                         if(isNaN(scope.list[index].value) || +scope.list[index].value < 0) {
                             scope.list[index].value = 0;
                         }
@@ -98,12 +100,18 @@
                     }
 
                     function selectSanitise(index) {
+                        budgetSanitise();
                         // if(calcTotalSum() > scope.budget) {
                         //     scope.list[index].value = '0';
                         // }
                     }
 
                     function budgetSanitise() {
+                        if(calcTotalSum() > scope.budget && scope.budget === 0) {
+                            scope.list.forEach(function(item) {
+                                item.value = 0;
+                            });
+                        }
                         // if(calcTotalSum() > scope.budget) {
                         //     scope.list.forEach(function(item) {
                         //         item.value = 0;
