@@ -29,10 +29,12 @@
     <div class="calculator-progress-column">
         <div class="calculator-progress-container">
             <div class="progress-container">
-                <div class="progress">
+                <div class="progress" data-ng-class="{'flash': outBudget}">
                     <progress max="100" ng-attr-value={{getProgressValue()}}></progress>
                     <div class="progress-bg"><div class="progress-bar"></div></div>
                 </div>
+                <div class="top-range-bar" data-ng-style="{'width': topRange+'px'}"></div>
+                <div class="top-range" data-ng-style="{'right': topRange+'px'}"></div>
             </div>
         </div>
     </div>

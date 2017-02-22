@@ -539,6 +539,8 @@
     font: 12px Arial, Tahoma, sans-serif;
     position: relative;
     overflow: hidden; }
+.services-calculator-container .progress.flash .progress-bar {
+    background: #7E2933; }
 .services-calculator-container .progress progress {
     position: absolute;
     width: 0;
@@ -553,10 +555,7 @@
     background: #ffffff;
     position: relative;
     height: 25px;
-    overflow: hidden;
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(50%, rgba(255, 255, 255, 0.15)), color-stop(70%, rgba(255, 235, 14, 0.52)), color-stop(85%, rgba(255, 150, 63, 0.8)), to(rgba(238, 74, 74, 0.8)));
-    background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.15) 50%, rgba(255, 235, 14, 0.52) 70%, rgba(255, 150, 63, 0.8) 85%, rgba(238, 74, 74, 0.8) 100%);
-    background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.15) 50%, rgba(255, 235, 14, 0.52) 70%, rgba(255, 150, 63, 0.8) 85%, rgba(238, 74, 74, 0.8) 100%); }
+    overflow: hidden; }
 
 @-webkit-keyframes progress_bar {
     0% {
@@ -571,7 +570,7 @@
         background-position: -40px 0; } }
 .services-calculator-container .progress-bar {
     overflow: hidden;
-    background: #45db68;
+    background-color: #45db68;
     height: 100%;
     position: absolute;
     top: 0;
@@ -580,10 +579,6 @@
     -webkit-transition: width 1s linear;
     transition: width 1s linear; }
 .services-calculator-container .progress-bar:after {
-    -webkit-animation: progress_bar 0.8s linear infinite;
-    animation: progress_bar 0.8s linear infinite;
-    background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
-    background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-size: 40px 40px;
     position: absolute;
     content: '';
@@ -591,3 +586,22 @@
     left: 0;
     width: 100%;
     height: 100%; }
+.services-calculator-container .top-range {
+    top: -10px;
+    right: 0;
+    position: absolute;
+    height: 45px;
+    width: 2px;
+    background-color: white;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
+.services-calculator-container .top-range-bar {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    height: 25px;
+    width: 0;
+    background-color: red;
+    -webkit-transition: 0.5s;
+    transition: 0.5s; }
